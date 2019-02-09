@@ -66,6 +66,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-127" y="134"/>
         </scene>
         <!--Sign Up Controller-->
         <scene sceneID="l8O-Sf-UH3">
