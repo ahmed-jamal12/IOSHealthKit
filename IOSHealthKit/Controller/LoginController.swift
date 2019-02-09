@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginController: UIViewController {
     
@@ -38,6 +39,8 @@ class LoginController: UIViewController {
         let tf = UITextField()
         return tf.textField(withPlaceolder: "Password", isSecureTextEntry: true)
     }()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +49,42 @@ class LoginController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    @IBAction func handleLogin(_ sender: Any) {
+        
+        
+            guard let email = emailTextField.text else { return }
+            guard let password = passwordTextField.text else { return }
+            
+            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                
+                if let error = error {
+                    self.presentAlertController(withMessage: error.localizedDescription)
+                    return
+                }
+                
+                
+                
+                
+                
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     func configureViewComponents() {
-        view.backgroundColor = UIColor.mainBlue()
+       
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
         
@@ -62,49 +98,18 @@ class LoginController: UIViewController {
         view.addSubview(passwordContainerView)
         passwordContainerView.anchor(top: emailContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 16, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
         
+        
+        
     }
 
     
     
-    @IBAction func loginButtonPressed(_ sender: Any) {
+   
     
-        if emailTextField.text != " " && passwordTextField.text != " " {
-            
-            loginUser()
-            
-        }else{
-            
-        }
-        
-        
-    }
+   
     
     
     
-    @IBAction func signUpButtonPressed(_ sender: Any) {
-        if emailTextField.text != " " && passwordTextField.text != " " {
-            
-            loginUser()
-            
-        }else{
-            
-        }
-    }
     
     
-    
-    @IBAction func backgroundTapped(_ sender: Any) {
-    print("dismiss")
-    }
-    
-    // helper function
-    
-    func loginUser() {
-        print("logging in")
-    }
-    
-    
-    func SignUpUser() {
-        print("Signing up")
-    }
 }

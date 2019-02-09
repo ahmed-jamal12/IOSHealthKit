@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpController: UIViewController {
     
@@ -47,6 +48,17 @@ class SignUpController: UIViewController {
         let tf = UITextField()
         return tf.textField(withPlaceolder: "Password", isSecureTextEntry: true)
     }()
+    
+    let signupButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Sign Up", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        button.setTitleColor(UIColor.mainBlue(), for: .normal)
+        button.backgroundColor = .white
+        button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+        button.layer.cornerRadius = 5
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,8 +67,41 @@ class SignUpController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @objc func handleSignUp() {
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        guard let username = usernameTextField.text else { return }
+        
+        createUser(withEmail: email, password: password, username: username)
+    }
+    
+    func createUser(withEmail email: String, password: String, username: String) {
+        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+            if let error = error {
+                self.presentAlertController(withMessage: error.localizedDescription)
+                return
+            }
+            
+            guard let uid = authResult?.user.uid else { return }
+            
+            let values = ["email": email,
+                          "username": username]
+            
+            USERS_REF.child(uid).updateChildValues(values, withCompletionBlock: { (err, ref) in
+                if let err = err {
+                    self.presentAlertController(withMessage: err.localizedDescription)
+                    return
+                }
+                
+                
+                
+                self.dismiss(animated: true, completion: nil)
+            })
+        }
+    }
+    
     func configureViewComponents() {
-        view.backgroundColor = UIColor.mainBlue()
+        
         navigationController?.navigationBar.isHidden = true
         
         view.addSubview(logoImageView)
@@ -71,6 +116,9 @@ class SignUpController: UIViewController {
         
         view.addSubview(passwordContainerView)
         passwordContainerView.anchor(top: usernameContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 16, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
+        
+        view.addSubview(signupButton)
+        signupButton.anchor(top: passwordContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 24, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
         
         
         

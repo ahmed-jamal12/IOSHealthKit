@@ -31,25 +31,27 @@
                                     <segue destination="KMI-4H-Se1" kind="show" id="g9H-ad-92c"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yye-lf-Ge2">
-                                <rect key="frame" x="88" y="352" width="200" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnI-cs-0A8">
+                                <rect key="frame" x="87" y="389" width="200" height="44"/>
                                 <state key="normal" image="login_button"/>
                                 <connections>
-                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="woE-DY-LUC"/>
+                                    <action selector="handleLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ofv-Ug-e7j"/>
+                                    <segue destination="3zd-WQ-74h" kind="show" id="0Rm-Mt-bvV"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yye-lf-Ge2" secondAttribute="trailing" constant="87" id="4fE-bw-GBz"/>
+                            <constraint firstItem="fnI-cs-0A8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="8Kr-0y-mhn"/>
+                            <constraint firstItem="fnI-cs-0A8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="369" id="C0L-dJ-Lrp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fnI-cs-0A8" secondAttribute="trailing" constant="88" id="HbW-io-AdI"/>
                             <constraint firstAttribute="bottom" secondItem="Nna-Oi-7mx" secondAttribute="bottom" id="JgP-Bi-T8k"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yjk-L1-BNG" secondAttribute="bottom" constant="20" id="Lma-yv-WUs"/>
                             <constraint firstAttribute="trailing" secondItem="Nna-Oi-7mx" secondAttribute="trailing" id="RWQ-77-vbG"/>
                             <constraint firstItem="Nna-Oi-7mx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ryr-Hr-dWE"/>
                             <constraint firstItem="Nna-Oi-7mx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WAg-2h-JXW"/>
-                            <constraint firstItem="yye-lf-Ge2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="dPq-11-ChT"/>
-                            <constraint firstItem="yye-lf-Ge2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="332" id="ixs-3m-B7P"/>
+                            <constraint firstItem="yjk-L1-BNG" firstAttribute="top" secondItem="fnI-cs-0A8" secondAttribute="bottom" constant="181" id="oaN-Pa-y4y"/>
                             <constraint firstItem="yjk-L1-BNG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="rPg-mc-lsf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yjk-L1-BNG" secondAttribute="trailing" constant="70" id="shr-Ch-I27"/>
                         </constraints>
@@ -68,6 +70,22 @@
             </objects>
             <point key="canvasLocation" x="-127" y="134"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="BcO-Jf-Vh8">
+            <objects>
+                <viewController id="Mm5-Fj-XcP" customClass="HomeController" customModule="IOSHealthKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y78-Lr-fT5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.31390488150000001" green="0.68692487479999997" blue="0.88238018750000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="5T7-2q-jDm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="YKb-wo-rnr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOf-PQ-4oa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="1746"/>
+        </scene>
         <!--Sign Up Controller-->
         <scene sceneID="l8O-Sf-UH3">
             <objects>
@@ -79,10 +97,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_app" translatesAutoresizingMaskIntoConstraints="NO" id="02f-Wc-Bav">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9D-vM-w5L">
-                                <rect key="frame" x="87" y="405" width="200" height="45"/>
-                                <state key="normal" image="SignUp"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5e-lw-by9">
                                 <rect key="frame" x="48" y="614" width="278" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
@@ -99,12 +113,8 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="02f-Wc-Bav" secondAttribute="bottom" id="2I7-Tk-zib"/>
                             <constraint firstAttribute="trailing" secondItem="02f-Wc-Bav" secondAttribute="trailing" id="R1k-Kx-Ncy"/>
-                            <constraint firstItem="o9D-vM-w5L" firstAttribute="top" secondItem="FbC-jx-qGf" secondAttribute="top" constant="385" id="TuH-oN-0AO"/>
-                            <constraint firstItem="o9D-vM-w5L" firstAttribute="leading" secondItem="FbC-jx-qGf" secondAttribute="leading" constant="87" id="UNa-Nf-ZpL"/>
                             <constraint firstItem="02f-Wc-Bav" firstAttribute="top" secondItem="hKt-TO-AAw" secondAttribute="top" id="hQf-po-Fqs"/>
-                            <constraint firstItem="FbC-jx-qGf" firstAttribute="bottom" secondItem="o9D-vM-w5L" secondAttribute="bottom" constant="217" id="jAn-WC-gVv"/>
                             <constraint firstItem="A5e-lw-by9" firstAttribute="leading" secondItem="FbC-jx-qGf" secondAttribute="leading" constant="48" id="kDF-b9-E7b"/>
-                            <constraint firstItem="FbC-jx-qGf" firstAttribute="trailing" secondItem="o9D-vM-w5L" secondAttribute="trailing" constant="88" id="kme-Wr-AVQ"/>
                             <constraint firstItem="FbC-jx-qGf" firstAttribute="bottom" secondItem="A5e-lw-by9" secondAttribute="bottom" constant="20" id="qgb-fD-OkZ"/>
                             <constraint firstItem="02f-Wc-Bav" firstAttribute="leading" secondItem="hKt-TO-AAw" secondAttribute="leading" id="rBq-Lj-BjA"/>
                             <constraint firstItem="FbC-jx-qGf" firstAttribute="trailing" secondItem="A5e-lw-by9" secondAttribute="trailing" constant="49" id="xMa-iS-naD"/>
@@ -120,9 +130,25 @@
             </objects>
             <point key="canvasLocation" x="930" y="134"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zr3-WK-Fdo">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3zd-WQ-74h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TH1-eq-OXX">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Mm5-Fj-XcP" kind="relationship" relationship="viewControllers" id="zSl-rM-5pd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUC-wB-pWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="876.61169415292363"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="SignUp" width="200" height="45"/>
         <image name="bg_app" width="375" height="667"/>
         <image name="login_button" width="200" height="44.666667938232422"/>
     </resources>

@@ -15,6 +15,8 @@
 		D3F99711220F56F200377825 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F99710220F56F200377825 /* Extensions.swift */; };
 		D3F99713220F571200377825 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F99712220F571200377825 /* LoginController.swift */; };
 		D3F99715220F572700377825 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F99714220F572700377825 /* SignUpController.swift */; };
+		D3F99717220F673800377825 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F99716220F673800377825 /* Constant.swift */; };
+		D3F99719220F681700377825 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F99718220F681700377825 /* HomeController.swift */; };
 		DC2B13BC4D6392F4E833ECCB /* Pods_IOSHealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6388F57EB3A41AE762BE3DEB /* Pods_IOSHealthKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		D3F99710220F56F200377825 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D3F99712220F571200377825 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		D3F99714220F572700377825 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		D3F99716220F673800377825 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D3F99718220F681700377825 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 				D3F2E9DE220F533F00EB77EB /* LaunchScreen.storyboard */,
 				D3F2E9E1220F533F00EB77EB /* Info.plist */,
 				D3F2E9E7220F537F00EB77EB /* GoogleService-Info.plist */,
+				D3F99718220F681700377825 /* HomeController.swift */,
 			);
 			path = IOSHealthKit;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				D3F99710220F56F200377825 /* Extensions.swift */,
+				D3F99716220F673800377825 /* Constant.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -242,6 +248,8 @@
 			files = (
 				D3F2E9D6220F533F00EB77EB /* AppDelegate.swift in Sources */,
 				D3F99713220F571200377825 /* LoginController.swift in Sources */,
+				D3F99719220F681700377825 /* HomeController.swift in Sources */,
+				D3F99717220F673800377825 /* Constant.swift in Sources */,
 				D3F99711220F56F200377825 /* Extensions.swift in Sources */,
 				D3F99715220F572700377825 /* SignUpController.swift in Sources */,
 			);
