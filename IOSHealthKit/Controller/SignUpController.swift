@@ -49,16 +49,6 @@ class SignUpController: UIViewController {
         return tf.textField(withPlaceolder: "Password", isSecureTextEntry: true)
     }()
     
-    let signupButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Sign Up", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
-        button.setTitleColor(UIColor.mainBlue(), for: .normal)
-        button.backgroundColor = .white
-        button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
-        button.layer.cornerRadius = 5
-        return button
-    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +57,8 @@ class SignUpController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @objc func handleSignUp() {
+   
+    @IBAction func signUpButton(_ sender: Any) {
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         guard let username = usernameTextField.text else { return }
@@ -82,27 +73,13 @@ class SignUpController: UIViewController {
                 return
             }
             
-            guard let uid = authResult?.user.uid else { return }
             
-            let values = ["email": email,
-                          "username": username]
-            
-            USERS_REF.child(uid).updateChildValues(values, withCompletionBlock: { (err, ref) in
-                if let err = err {
-                    self.presentAlertController(withMessage: err.localizedDescription)
-                    return
-                }
-                
-                
-                
-                self.dismiss(animated: true, completion: nil)
-            })
         }
     }
     
     func configureViewComponents() {
         
-        navigationController?.navigationBar.isHidden = true
+    
         
         view.addSubview(logoImageView)
         logoImageView.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 60, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 150)
@@ -116,10 +93,6 @@ class SignUpController: UIViewController {
         
         view.addSubview(passwordContainerView)
         passwordContainerView.anchor(top: usernameContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 16, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
-        
-        view.addSubview(signupButton)
-        signupButton.anchor(top: passwordContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 24, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
-        
         
         
     }

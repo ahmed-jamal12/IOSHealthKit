@@ -67,26 +67,15 @@ class LoginController: UIViewController {
                 
                 
                 
-                self.dismiss(animated: true, completion: nil)
+                
             }
         }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
 
     func configureViewComponents() {
        
-        navigationController?.navigationBar.isHidden = true
-        navigationController?.navigationBar.barStyle = .black
+        
         
         view.addSubview(logoImageView)
         logoImageView.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 60, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 150)
@@ -102,14 +91,6 @@ class LoginController: UIViewController {
         
     }
 
-    
-    
-   
-    
-   
-    
-    
-    
     
     
 }
