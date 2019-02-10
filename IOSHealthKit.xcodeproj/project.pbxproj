@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D36104A92210509100601A53 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36104A82210509100601A53 /* MapScreen.swift */; };
 		D3F2E9D6220F533F00EB77EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2E9D5220F533F00EB77EB /* AppDelegate.swift */; };
 		D3F2E9DB220F533F00EB77EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F2E9D9220F533F00EB77EB /* Main.storyboard */; };
 		D3F2E9DD220F533F00EB77EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F2E9DC220F533F00EB77EB /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		2BC791DEED69EF758F5B5950 /* Pods-IOSHealthKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSHealthKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOSHealthKit/Pods-IOSHealthKit.debug.xcconfig"; sourceTree = "<group>"; };
 		6388F57EB3A41AE762BE3DEB /* Pods_IOSHealthKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSHealthKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7CFA379F5828235BDDFE76 /* Pods-IOSHealthKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSHealthKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOSHealthKit/Pods-IOSHealthKit.release.xcconfig"; sourceTree = "<group>"; };
+		D36104A82210509100601A53 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		D3F2E9D2220F533F00EB77EB /* IOSHealthKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSHealthKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F2E9D5220F533F00EB77EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3F2E9DA220F533F00EB77EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				D3F2E9E1220F533F00EB77EB /* Info.plist */,
 				D3F2E9E7220F537F00EB77EB /* GoogleService-Info.plist */,
 				D3F99718220F681700377825 /* HomeController.swift */,
+				D36104A82210509100601A53 /* MapScreen.swift */,
 			);
 			path = IOSHealthKit;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				D3F2E9D6220F533F00EB77EB /* AppDelegate.swift in Sources */,
 				D3F99713220F571200377825 /* LoginController.swift in Sources */,
 				D3F99719220F681700377825 /* HomeController.swift in Sources */,
+				D36104A92210509100601A53 /* MapScreen.swift in Sources */,
 				D3F99717220F673800377825 /* Constant.swift in Sources */,
 				D3F99711220F56F200377825 /* Extensions.swift in Sources */,
 				D3F99715220F572700377825 /* SignUpController.swift in Sources */,
